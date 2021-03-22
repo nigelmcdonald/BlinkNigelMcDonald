@@ -2,7 +2,7 @@
 
 
 //GPIO pin
-int led = D7;
+int ledPin = D7;
 
 //time values
 int dit = 100;
@@ -12,22 +12,22 @@ int charGap = 300;
 
 void setup() {
 
-  pinMode(led, OUTPUT); // set pin to output
+  pinMode(ledPin, OUTPUT); // set D7 to output
 }
 
 //function to have the LED perform a Dit likedisplay
 void DoDit(){
-    digitalWrite(led, HIGH);
+    digitalWrite(ledPin, HIGH);
     delay(dit);
-    digitalWrite(led, LOW);
+    digitalWrite(ledPin, LOW);
     delay(intragap);
 }
 
 //function to have the LED perform a Da like display
 void DoDa(){
-    digitalWrite(led, HIGH);
+    digitalWrite(ledPin, HIGH);
     delay(da);
-    digitalWrite(led, LOW);
+    digitalWrite(ledPin, LOW);
     delay(intragap);
 }
 
