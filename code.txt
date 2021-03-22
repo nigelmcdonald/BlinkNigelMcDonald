@@ -1,18 +1,21 @@
+//This code will cause an LED connected to GPIO D7 to blink the word nigel in morse code.
 
 
+//GPIO pin
 int led = D7;
+
+//time values
 int dit = 100;
 int da = 300;
 int intragap = 100;
 int charGap = 300;
 
-
 void setup() {
 
-  pinMode(led, OUTPUT);
+  pinMode(led, OUTPUT); // set pin to output
 }
 
-//function to have the LED perform a Dit
+//function to have the LED perform a Dit likedisplay
 void DoDit(){
     digitalWrite(led, HIGH);
     delay(dit);
@@ -20,7 +23,7 @@ void DoDit(){
     delay(intragap);
 }
 
-//function to have the LED perform a Dit
+//function to have the LED perform a Da like display
 void DoDa(){
     digitalWrite(led, HIGH);
     delay(da);
