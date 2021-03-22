@@ -1,0 +1,59 @@
+
+
+int led = D7;
+int dit = 100;
+int da = 300;
+int intragap = 100;
+int charGap = 300;
+
+
+void setup() {
+
+  pinMode(led, OUTPUT);
+}
+
+//function to have the LED perform a Dit
+void DoDit(){
+    digitalWrite(led, HIGH);
+    delay(dit);
+    digitalWrite(led, LOW);
+    delay(intragap);
+}
+
+//function to have the LED perform a Dit
+void DoDa(){
+    digitalWrite(led, HIGH);
+    delay(da);
+    digitalWrite(led, LOW);
+    delay(intragap);
+}
+
+void loop() {
+  
+  //N
+  DoDa(); DoDit();
+  //Character Space
+  delay(charGap);
+  
+  //I
+  DoDit(); DoDit();
+  //Character Space
+  delay(charGap);
+  
+  //G
+  DoDa(); DoDa(); DoDit();
+  //Character Space
+  delay(charGap);
+  
+  //E
+  DoDit();
+  //Character Space
+  delay(charGap);
+  
+  //L
+  DoDit(); DoDa(); DoDit(); DoDit(); 
+
+  //wait five before repeat name
+  delay(5000);
+}
+
